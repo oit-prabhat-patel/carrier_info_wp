@@ -16,7 +16,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   CarrierData? carrierData;
-  final _carrierInfoWpPlugin = CarrierInfoWp();
+  final _carrierInfoWp = CarrierInfoWp();
 
   @override
   void initState() {
@@ -30,7 +30,7 @@ class _MyAppState extends State<MyApp> {
 
   // Platform messages are asynchronous, so we initialize in an async method.
   Future<void> loadInfo() async {
-    final info = await _carrierInfoWpPlugin.getInfo();
+    final info = await _carrierInfoWp.getInfo();
 
     setState(() {
       carrierData = info;
